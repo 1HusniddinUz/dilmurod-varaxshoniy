@@ -94,7 +94,7 @@ const Contact = () => {
 
           <div className="contact-links">
             <span>
-              📞 <a href="tel:+998959998877">+998 (95) 999-88-77</a>
+              📞 <a href="tel:+998959588992">+998 (95) 958-89-92</a>
             </span>
             <div className="socials">
               <a

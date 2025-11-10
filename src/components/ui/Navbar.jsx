@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-
+import logo from "../../../public/logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo_box" data-aos="fade-right">
-          <h1>Dilmurod Varaxshoniy</h1>
+          <a href="/"><img src={logo} alt="DILMUROD VARAXSHONIY LOGO" /></a>
         </div>
 
         {/* Desktop & Mobile */}
@@ -90,13 +90,13 @@ const Navbar = () => {
             <select
               id="select"
               onChange={(e) => i18n.changeLanguage(e.target.value)}
-              defaultValue="en"
+              defaultValue="uz"
             >
-              <option value="en">🇬🇧 English</option>
-              <option value="ru">🇷🇺 Русский</option>
               <option value="uz">🇺🇿 O'zbek</option>
-              <option value="fr">🇫🇷 Français</option>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="en">🇬🇧 English</option>
               <option value="tr">🇹🇷 Türkçe</option>
+              <option value="fr">🇫🇷 Français</option>
             </select>
           </div>
         </ul>

@@ -20,11 +20,8 @@
 .logo_box {
   width: 30%;
 }
-.navbar h1 {
-  color: black;
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: left;
+.logo_box img {
+  height: 65px;
 }
 
 /* Desktop ul */
