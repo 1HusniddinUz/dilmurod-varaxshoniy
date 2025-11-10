@@ -4,7 +4,7 @@ const translationsTr = {
   contact: `İletişim`,
 
   // Kahraman Bölümü
-
+  slogan: `“Dilmurod Varahşoniy — heykeltıraşlık ve minyatür sanatında millî zarafetin timsalidir.”`, 
   // Ürünler
   productH3: `Ürünlerimiz`,
   productClose: `Tümünü kapat`,

@@ -4,7 +4,7 @@ const translationsEn = {
   contact: `Contact`,
 
   // Hero Section
-
+  slogan: `“Dilmurod Varaxshoniy is the embodiment of national elegance in sculpture and miniature art.”`, 
   // Products
   productH3: `Our Products`,
   productClose: `Close all`,

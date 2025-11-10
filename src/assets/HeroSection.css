@@ -34,6 +34,8 @@
 }
 
 .hero_content h1 {
+  margin: 0 auto;
+  width: 60%;
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1px;

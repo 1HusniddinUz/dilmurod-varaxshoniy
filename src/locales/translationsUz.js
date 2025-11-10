@@ -4,7 +4,7 @@ const translationsUz = {
   contact: `Bog'lanish uchun`,
 
   // Hero Section
-
+  slogan: `“Dilmurod Varaxshoniy — haykaltaroshlik va miniatura san’atida milliy nafislik timsoli.”`, 
   // Products
   productH3: "Bizning Mahsulotlarimiz",
   productClose: `Barchasini yopish`,

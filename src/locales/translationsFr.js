@@ -4,7 +4,7 @@ const translationsFr = {
   contact: `Contact`,
 
   // Section Héro
-
+  slogan: `« Dilmurod Varaxshoniy — l’incarnation de l’élégance nationale dans la sculpture et l’art de la miniature. »`, 
   // Produits
   productH3: `Nos produits`,
   productClose: `Tout fermer`,
