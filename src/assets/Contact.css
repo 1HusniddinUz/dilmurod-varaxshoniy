@@ -77,11 +77,16 @@
   color: #007bff;
   transform: scale(1.1);
 }
-
+.contact-map
+{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 /* === MAP === */
 .contact-map iframe {
   width: 100%;
-  height: 240px;
+  height: 500px;
   border-radius: 10px;
   border: none;
   margin-top: 20px;

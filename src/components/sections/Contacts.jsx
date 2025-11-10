@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "../../assets/Contact.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import logo from "../../../public/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", number: "" });
-
+  const { t } = useTranslation();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -76,18 +80,16 @@ const Contact = () => {
     <section id="Contact">
       <div className="contact-container">
         {/* LEFT SIDE — Info */}
-        <div className="contact-info">
-          <h3>Contacts</h3>
+        <div className="contact-info" data-aos="fade-right">
+          <h3>{t(`contact`)}</h3>
           <img
-            src=""
+            src={logo}
             alt="DILMUROD VARAXSHONIY LOGOTIP"
             className="contact-logo"
           />
 
           <p>
-            Biz bilan bog‘lanish uchun quyidagi shakldan foydalaning yoki
-            to‘g‘ridan-to‘g‘ri quyidagi aloqa manzillarimiz orqali murojaat
-            qiling.
+            {t(`contactInfo`)}
           </p>
 
           <div className="contact-links">
@@ -125,20 +127,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-
-          <div className="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6107.847574386694!2d64.24434201580809!3d40.05480169426952!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDAzJzA2LjEiTiA2NMKwMTUnMTAuNyJF!5e0!3m2!1sru!2s!4v1762525997240!5m2!1sru!2s"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Location Map"
-            ></iframe>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE — Form */}
-        <form
+          <form
           className="res-form"
           data-aos="fade-up"
           data-aos-delay="600"
@@ -174,13 +163,36 @@ const Contact = () => {
             data-aos="fade-up"
             data-aos-delay="1200"
           >
-            toOrderBtn
+            {t(`contactNum`)}
           </button>
         </form>
+        </div>
+
+        {/* RIGHT SIDE — Form */}
+        <div className="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6107.847574386694!2d64.24434201580809!3d40.05480169426952!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDAzJzA2LjEiTiA2NMKwMTUnMTAuNyJF!5e0!3m2!1sru!2s!4v1762525997240!5m2!1sru!2s"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Location Map"
+          ></iframe>
+        </div>
+        
       </div>
 
-      <div className="copyright">
-        <p>© 2025 Dilmurod Varaxshoniy. Barcha huquqlar himoyalangan. <br /> Designed by <a href="https://t.me/buxoro_tadbirkorlar_klubi" target="_blank" rel="noopener noreferrer"><strong>Buxoro tadbirkorlar biznes klubi</strong></a></p>
+      <div className="copyright" data-aos="fade-up">
+        <p>
+          © 2025 Dilmurod Varaxshoniy. Barcha huquqlar himoyalangan. <br />{" "}
+          Designed by{" "}
+          <a
+            href="https://t.me/buxoro_tadbirkorlar_klubi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Buxoro tadbirkorlar biznes klubi</strong>
+          </a>
+        </p>
       </div>
     </section>
   );
