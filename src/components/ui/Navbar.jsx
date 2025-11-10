@@ -4,16 +4,18 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import logo from "../../../public/logo.png"
+import logo from "../../../public/logo.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { t, i18n } = useTranslation();
+
   useEffect(() => {
     AOS.init({
-      duration: 700, // animatsiya davomiyligi (ms)
-      easing: "ease-in-out", // harakat uslubi
-      once: true, // faqat bir marta animatsiya bo‘lsin
+      duration: 700,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
@@ -21,14 +23,31 @@ const Navbar = () => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
+  // Ekran kengligini aniqlash uchun
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Dropdown toggle handler
+  const handleDropdownToggle = () => {
+    if (isMobile) {
+      setIsDropdownOpen((prev) => !prev); // faqat mobile-da click bilan ishlaydi
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="container">
         <div className="logo_box" data-aos="fade-right">
-          <a href="/"><img src={logo} alt="DILMUROD VARAXSHONIY LOGO" /></a>
+          <a href="/">
+            <img src={logo} alt="DILMUROD VARAXSHONIY LOGO" />
+          </a>
         </div>
 
-        {/* Desktop & Mobile */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <div className="navigation" data-aos="fade-down">
             <li>
@@ -38,15 +57,17 @@ const Navbar = () => {
             {/* Dropdown - Marketplace */}
             <li
               className="dropdown"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              onMouseEnter={() => !isMobile && setIsDropdownOpen(true)}
+              onMouseLeave={() => !isMobile && setIsDropdownOpen(false)}
             >
               <button
                 className="dropdown-btn"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={handleDropdownToggle}
               >
-                <a href="#">Marketplace</a> <ChevronDown size={16} />
+                <span>Marketplace</span> <ChevronDown size={16} />
               </button>
+
+              {/* Menyu faqat click orqali ochiladi (mobil) */}
               <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
                 <li>
                   <a
@@ -84,9 +105,6 @@ const Navbar = () => {
           </div>
 
           <div className="lang_switcher_mobile">
-            <label htmlFor="lang" className="sr-only">
-              Language
-            </label>
             <select
               id="select"
               onChange={(e) => i18n.changeLanguage(e.target.value)}
@@ -101,7 +119,6 @@ const Navbar = () => {
           </div>
         </ul>
 
-        {/* Burger Icon */}
         <div
           className={`burger ${isOpen ? "fixed" : ""}`}
           onClick={() => setIsOpen(!isOpen)}

@@ -33,15 +33,15 @@ const translationsEn = {
   },
   product6: {
     name: `Navruz Day`,
-    info: `40×50 cm \nDrawn in mahogany oil on paper`,
+    info: `40×50 cm \nDrawn in mahogany oil on holst`,
   },
   product7: {
     name: `Lovers`,
-    info: `50×70 cm \nDrawn in mahogany oil on paper`,
+    info: `50×70 cm \nDrawn in mahogany oil on holst`,
   },
   product8: {
     name: `Creative Girl`,
-    info: `70×90 cm \nDrawn in mahogany oil on paper`,
+    info: `70×90 cm \nDrawn in mahogany oil on holst`,
   },
   product9: {
     name: `Flower in the Night`,

@@ -33,15 +33,15 @@ const translationsUz = {
   },
   product6: {
     name: `Navro'z kuni`,
-    info: `40x50 sm \nQog'ozda mahogany yog'ida chizilgan`,
+    info: `40x50 sm \nXolstda mahogany yog'ida chizilgan`,
   },
   product7: {
     name: `Sevishganlar`,
-    info: `50x70 sm \nQog'ozda mahogany yog'ida chizilgan`,
+    info: `50x70 sm \nXolstda mahogany yog'ida chizilgan`,
   },
   product8: {
     name: `Ijodiy qiz`,
-    info: `70x90 sm \nQog'ozda mahogany yog'ida chizilgan`,
+    info: `70x90 sm \nXolstda mahogany yog'ida chizilgan`,
   },
   product9: {
     name: `Tundagi gul`,

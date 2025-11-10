@@ -33,15 +33,15 @@ const translationsFr = {
   },
   product6: {
     name: `Jour de Navrouz`,
-    info: `40×50 cm \nDessiné à l’huile d’acajou sur papier`,
+    info: `40×50 cm \nDessiné à l’huile d’acajou sur holst`,
   },
   product7: {
     name: `Amoureux`,
-    info: `50×70 cm \nDessiné à l’huile d’acajou sur papier`,
+    info: `50×70 cm \nDessiné à l’huile d’acajou sur holst`,
   },
   product8: {
     name: `Fille créative`,
-    info: `70×90 cm \nDessiné à l’huile d’acajou sur papier`,
+    info: `70×90 cm \nDessiné à l’huile d’acajou sur holst`,
   },
   product9: {
     name: `Fleur dans la nuit`,

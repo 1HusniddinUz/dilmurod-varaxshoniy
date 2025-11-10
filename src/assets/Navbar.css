@@ -220,7 +220,7 @@
     text-align: center;
   }
   .lang_switcher_mobile {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: flex;
     flex-direction: column;

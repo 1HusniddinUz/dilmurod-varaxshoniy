@@ -33,15 +33,15 @@ const translationsTr = {
   },
   product6: {
     name: `Nevruz Günü`,
-    info: `40×50 cm \nKâğıt üzerine maun yağı ile çizilmiştir`,
+    info: `40×50 cm \nHolst üzerine maun yağı ile çizilmiştir`,
   },
   product7: {
     name: `Âşıklar`,
-    info: `50×70 cm \nKâğıt üzerine maun yağı ile çizilmiştir`,
+    info: `50×70 cm \nHolst üzerine maun yağı ile çizilmiştir`,
   },
   product8: {
     name: `Yaratıcı kız`,
-    info: `70×90 cm \nKâğıt üzerine maun yağı ile çizilmiştir`,
+    info: `70×90 cm \nHolst üzerine maun yağı ile çizilmiştir`,
   },
   product9: {
     name: `Gecedeki çiçek`,
