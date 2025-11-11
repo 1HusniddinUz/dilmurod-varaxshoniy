@@ -51,7 +51,7 @@ const Navbar = () => {
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <div className="navigation" data-aos="fade-down">
             <li>
-              <a href="#OurProducts">{t(`products`)}</a>
+              <a href="#Products">{t(`products`)}</a>
             </li>
 
             {/* Dropdown - Marketplace */}
@@ -100,7 +100,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="#Footer">{t(`contact`)}</a>
+              <a href="#Contact">{t(`contact`)}</a>
             </li>
           </div>
 
